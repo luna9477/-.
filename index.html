@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>นายไชยวุฒิ ซุ่นสั้น</title>
+
+  <!-- Bootstrap CSS (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- ฟอนต์ (option) -->
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --blue:#2f80ed;
+      --light-blue:#e8f6ff;
+      --card-bg: #ffffff;
+      --muted:#6c757d;
+    }
+
+    body{
+      font-family: 'Kanit', Arial, sans-serif;
+      background: linear-gradient(180deg, #f6fbff 0%, var(--light-blue) 100%);
+      color:#222;
+      padding-top: 70px; /* ให้ navbar ไม่บัง */
+    }
+
+    /* Navbar style */
+    .navbar {
+      background: linear-gradient(90deg,var(--blue),#1b6fd4);
+    }
+    .navbar-brand { font-weight:700; color:#fff; }
+    .nav-link { color: rgba(255,255,255,0.9) !important; }
+
+    /* หัวข้อ section */
+    .section-title {
+      color: var(--blue);
+      border-left: 5px solid var(--blue);
+      padding-left: 12px;
+      margin-bottom: 12px;
+    }
+
+    /* Card */
+    .card-resume {
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(20,40,80,0.08);
+      background: var(--card-bg);
+    }
+
+    /* รูปวงกลม (display แบบวงกลม) */
+    .profile-pic {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid #fff;
+      box-shadow: 0 6px 18px rgba(47,128,237,0.18);
+      display:block;
+      margin: 0 auto;
+    }
+
+    /* เส้นแบ่งย่อหน้า */
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #e8eefc, transparent);
+      margin: 18px 0;
+    }
+
+    /* Skills กริด */
+    .skill-pill{
+      display:inline-block;
+      padding:6px 12px;
+      margin:6px 6px 0 0;
+      background:#f3f9ff;
+      color:var(--blue);
+      border-radius: 999px;
+      font-weight:600;
+      border:1px solid rgba(47,128,237,0.08);
+    }
+
+    /* Contact ordered list style */
+    ol.contact-list{
+      padding-left: 1.1rem;
+    }
+
+    /* email: แสดง @ เป็นรูปภาพ (data-uri svg) */
+    .at-icon{
+      width:18px;
+      height:18px;
+      vertical-align:text-bottom;
+      margin:0 2px;
+    }
+
+    /* Responsive tweaks */
+    @media (min-width: 992px){
+      .profile-left {
+        border-right: 1px solid rgba(47,128,237,0.06);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar (Toggle / Responsive) -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand text-white" href="#">Resume</a>
+      <button class="navbar-toggler btn btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsResume" aria-controls="navbarsResume" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsResume">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main content -->
+  <main class="container my-4">
+
+    <!-- Top card: รูป + ข้อมูลพื้นฐาน -->
+    <div class="card card-resume mb-4 p-3">
+      <div class="row g-0 align-items-center">
+        <div class="col-lg-3 text-center profile-left p-3">
+          <!-- ใส่รูปที่อัปขึ้น repo เช่น images/profile.jpg -->
+          <img src="images/profile.jpg" alt="Profile picture" class="profile-pic">
+          <h1 class="h4 mt-3 mb-0">ชื่อ นามสกุล</h1>
+          <p class="mb-0"><em>สาขาวิชา: <em>คอมพิวเตอร์ธุรกิจ</em></em></p> <!-- ใช้ em ตาม requirement -->
+          <p class="mb-0">คณะ: วิทยาการสารสนเทศ</p>
+          <p class="mb-0">สถาบัน: <a href="http://pim.ac.th" target="_blank" rel="noopener">Panyapiwat Institute of Management</a></p>
+        </div>
+
+        <div class="col-lg-9 p-3">
+          <h2 class="section-title">About Me</h2>
+          <p>สวัสดีครับ ผมเป็นนักศึกษาสาขาDit สนใจด้านการพัฒนาเว็บและการออกแบบ UX/UI มีพื้นฐาน HTML, CSS, JavaScript และกำลังเรียนรู้ Bootstrap เพื่อพัฒนาเว็บไซต์ที่ responsive และใช้งานง่าย</p>
+          <div class="divider"></div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <h4 class="mb-2">ประวัติโดยย่อ</h4>
+              <p class="small text-muted">มีประสบการณ์ทำงานพาร์ทไทม์ที่เกี่ยวข้องกับงานดูแลสื่อโซเชียลและช่วยพัฒนาเว็บเล็กๆ สำหรับร้านค้าในท้องถิ่น</p>
+            </div>
+            <div class="col-md-6">
+              <h4 class="mb-2">เป้าหมาย</h4>
+              <p class="small text-muted">ต้องการฝึกงานในสาย Web Development เพื่อเพิ่มทักษะการเขียนโค้ดและเรียนรู้ระบบจริงในองค์กร</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Education -->
+    <section id="education" class="card card-resume mb-4 p-3">
+      <h2 class="section-title">Education</h2>
+      <div class="row">
+        <div class="col-md-8">
+          <h5 class="mb-1">ปริญญาตรี (กำลังศึกษา)</h5>
+          <p class="mb-1">สาขา DIT — สถาบันจัดการปัญญาภิวัฒน์</p>
+          <p class="small text-muted">คาดว่าจะจบปี พ.ศ. 2570</p>
+        </div>
+        <div class="col-md-4 text-md-end">
+          <p class="small text-muted">GPA: — 2.74</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="card card-resume mb-4 p-3">
+      <h2 class="section-title">Skills</h2>
+
+      <!-- ใช้ 4 column สำหรับ skill ตามโจทย์ (แบบ responsive) -->
+      <div class="row">
+        <div class="col-6 col-md-3 mb-2">
+          <div class="p-2 border rounded">
+            <strong>HTML</strong>
+            <div class="mt-2"><span class="skill-pill">⭐⭐⭐⭐</span></div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 mb-2">
+          <div class="p-2 border rounded">
+            <strong>CSS</strong>
+            <div class="mt-2"><span class="skill-pill">⭐⭐⭐</span></div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 mb-2">
+          <div class="p-2 border rounded">
+            <strong>JavaScript</strong>
+            <div class="mt-2"><span class="skill-pill">⭐⭐</span></div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 mb-2">
+          <div class="p-2 border rounded">
+            <strong>Bootstrap</strong>
+            <div class="mt-2"><span class="skill-pill">⭐⭐⭐</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- อื่น ๆ (Experience / Projects) -->
+    <section id="projects" class="card card-resume mb-4 p-3">
+      <h2 class="section-title">Experience / Projects</h2>
+      <ul>
+        <li>ทำเว็บโปรเจกต์เรียนรู้ HTML/CSS สำหรับร้านค้าขนาดเล็ก</li>
+        <li>ออกแบบหน้า Landing Page และปรับให้ responsive ด้วย Bootstrap</li>
+      </ul>
+    </section>
+
+    <!-- Contact (ต้องเป็น Ordered List) -->
+    <section id="contact" class="card card-resume mb-4 p-3">
+      <h2 class="section-title">Contact</h2>
+
+      <ol class="contact-list">
+        <li>
+          อีเมล์: 
+          <!-- แทน @ ด้วยรูปภาพ SVG เพื่อป้องกันสแปม -->
+          <span>675210038@spc.ac.th</span>
+          <img class="at-icon" alt="at" src='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"><rect width="100%" height="100%" fill="none"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="14" font-family="Kanit,Arial" fill="%232f80ed">@</text></svg>'>
+          <span>https://reg.pim.ac.th/registrar/login.asp</span>
+        </li>
+        <li>099-999-9999</li>
+        <li>กรุงเทพมหานคร</li>
+        <li>GitHub: <a href="https://luna9477.github.io/my-website/" target="_blank" rel="noopener">github.com/your-username</a></li>
+      </ol>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center py-3">
+    <small class="text-muted">สร้างด้วย HTML, CSS และ Bootstrap — ตัวอย่าง Resume สำหรับส่งสถานประกอบการ</small>
+  </footer>
+
+  <!-- Bootstrap JS (popper + bootstrap) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Optional: Smooth scroll for anchor links (เล็กน้อยเพิ่ม UX) -->
+  <script>
+    document.querySelectorAll('a.nav-link').forEach(a=>{
+      a.addEventListener('click', function(e){
+        const href = this.getAttribute('href');
+        if(href && href.startsWith('#')){
+          e.preventDefault();
+          const el = document.querySelector(href);
+          if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
+          // ปิด navbar บนมือถืออัตโนมัติเมื่อคลิกเมนู
+          const bsCollapse = document.querySelector('.navbar-collapse');
+          if(bsCollapse && bsCollapse.classList.contains('show')){
+            const bs = bootstrap.Collapse.getInstance(bsCollapse) || new bootstrap.Collapse(bsCollapse);
+            bs.hide();
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>
